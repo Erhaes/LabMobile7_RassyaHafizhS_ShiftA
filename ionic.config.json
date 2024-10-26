@@ -1,0 +1,7 @@
+{
+  "name": "sidemenu-vue",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}

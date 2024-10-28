@@ -68,10 +68,6 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonSearchbar,
   IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle
  } from '@ionic/vue';
-import { defineComponent } from 'vue';
-
-
-
 </script>
 
 <style scoped>
@@ -102,7 +98,7 @@ ion-content {
 
 #container {
   width: 100%;
-  max-width: 600px; /* Batasan lebar untuk tampilan lebih rapi pada layar besar */
+  max-width: 600px; 
   margin: auto;
 }
 
@@ -113,7 +109,7 @@ ion-card{
 ion-card-title,
 ion-card-subtitle,
 ion-card-content {
-  text-align: left; /* Atur teks agar lebih mudah dibaca */
+  text-align: left; 
 }
 
 ion-searchbar {

@@ -69,8 +69,8 @@ if (path !== undefined) {
 
 const showLogoutAlert = async () => {
   const alert = await alertController.create({
-    header: 'Are you sure?',
-    message: 'Do you want to log out?',
+    header: 'Apakah anda yakin?',
+    message: 'Apakah anda yakin ingin Logout?',
     buttons: [
       {
         text: 'No',
@@ -79,7 +79,7 @@ const showLogoutAlert = async () => {
       {
         text: 'Yes',
         handler: () => {
-          console.log('User logged out');
+          console.log('Berhasil Log Out');
         },
       },
     ],

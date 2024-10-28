@@ -40,14 +40,12 @@ import {
   IonNote,
   IonRouterOutlet,
   IonSplitPane,
-  IonAlert,
   alertController,
 } from '@ionic/vue';
 import { ref } from 'vue';
 import {
   homeOutline,
   homeSharp,
-  logOutOutline,
   logOutSharp,
 } from 'ionicons/icons';
 

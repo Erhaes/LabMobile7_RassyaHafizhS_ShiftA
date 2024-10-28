@@ -1,2 +1,13 @@
 /* For information on how to create your own theme, please see:
 http://ionicframework.com/docs/theming/ */
+#nama{
+    font-size: large;
+}
+
+#nim{
+    font-size: larger;
+}
+
+#kalender{
+    align-content: center;
+}

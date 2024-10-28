@@ -17,8 +17,7 @@
       </ion-header>
 
       <div id="container">
-        <!-- <strong class="capitalize">{{ $route.params.id }}</strong> -->
-        <ion-searchbar show-clear-button="always"></ion-searchbar>
+        <ion-searchbar show-clear-button="focus"></ion-searchbar>
         <ion-card>
           <ion-card-header>
             <ion-card-title>Jogging</ion-card-title>

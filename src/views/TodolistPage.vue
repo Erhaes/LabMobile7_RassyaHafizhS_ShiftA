@@ -5,38 +5,76 @@
         <ion-buttons slot="start">
           <ion-menu-button color="primary"></ion-menu-button>
         </ion-buttons>
-        <ion-title>{{ $route.params.id }}</ion-title>
+        <ion-title>To Do List</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">{{ $route.params.id }}</ion-title>
+          <ion-title size="large">To Do List</ion-title>
         </ion-toolbar>
       </ion-header>
 
       <div id="container">
-        <strong class="capitalize">{{ $route.params.id }}</strong>
+        <!-- <strong class="capitalize">{{ $route.params.id }}</strong> -->
+        <ion-searchbar show-clear-button="always"></ion-searchbar>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Jogging</ion-card-title>
+            <ion-card-subtitle>06.00 - 06.15</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Jogging 15 menit sepanjang kompleks.
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Sarapan</ion-card-title>
+            <ion-card-subtitle>06.20 - 06.45</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            sarapan pagi supaya tidak kelaparan.
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Mandi & Ganti Baju</ion-card-title>
+            <ion-card-subtitle>06.45 - 07.00</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Mandi dan berpakaian rapi
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Berangkat Kuliah</ion-card-title>
+            <ion-card-subtitle>07.00 - 07.30</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Berangkat kuliah dari rumah.
+          </ion-card-content>
+        </ion-card>
       </div>
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonSearchbar,
+  IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle
+ } from '@ionic/vue';
+import { defineComponent } from 'vue';
+
+
+
 </script>
 
 <style scoped>
-#container {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 #container strong {
   font-size: 20px;
   line-height: 26px;
@@ -51,5 +89,35 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
 
 #container a {
   text-decoration: none;
+}
+
+ion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+#container {
+  width: 100%;
+  max-width: 600px; /* Batasan lebar untuk tampilan lebih rapi pada layar besar */
+  margin: auto;
+}
+
+ion-card{
+  border-radius: 10px;
+}
+
+ion-card-title,
+ion-card-subtitle,
+ion-card-content {
+  text-align: left; /* Atur teks agar lebih mudah dibaca */
+}
+
+ion-searchbar {
+  margin-bottom: 16px;
+  border-radius: 10px;
 }
 </style>
